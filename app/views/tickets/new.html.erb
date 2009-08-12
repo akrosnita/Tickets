@@ -1,0 +1,35 @@
+<h1>Tiket Baru</h1>
+
+<% form_for(@ticket) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nama %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :tempat_duduk %><br />
+    <%= f.text_field :seat_id_seq %>
+  </p>
+  <p>
+    <%= f.label :alamat %><br />
+    <%= f.text_area :address %>
+  </p>
+  <p>
+    <%= f.label :harga %><br />
+    <%= f.text_field :price_paid %>
+  </p>
+  <p>
+    <%= f.label :emel %><br />
+    <%= f.text_field :email_address %>
+  </p>
+<p>
+    <%= f.label :no_tel %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.submit 'Tambah' %>
+  </p>
+<% end %>
+
+<%= link_to 'Ke belakang', tickets_path %>
